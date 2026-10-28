@@ -1,1 +1,1 @@
-This project shows the enrollment of every unc system school with proportional symbols. 
+This project shows the enrollment of every unc system school with proportional symbols. I used the proportional symbols with a mathematical scaling to represent raw population numbers. All numbers are from a northcarolina.edu publication from fall 2026. Basemap is from Stadia maps and Open Street Maps. Map tile service through leaflet. 
