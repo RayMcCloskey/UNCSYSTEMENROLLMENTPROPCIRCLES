@@ -82,7 +82,7 @@ var Esri_WorldTopoMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest
 	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
 }).addTo(map);
 
-colleges = L.geoJson.ajax("assets/enrollment.geojson",{
+colleges = L.geoJson.ajax("enrollment.geojson",{
     attribution: 'northcarolina.edu, Map: Ray McCloskey',
     pointToLayer: function (feature, x){
       return L.circleMarker(x, {
