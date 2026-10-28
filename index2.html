@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Perceptual Circle Scaling</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+<style>
+      body {
+    margin:0;
+    padding:0;
+    font-family:
+    sans-serif;
+    }
+
+  h1 {
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    padding: 8px 2%;
+    margin: 0;
+    background: royalblue;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    color: whitesmoke;
+    font-size: 1.5em;
+    z-index: 800;
+    }
+
+  #map {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width: 1040px;
+    height: 600px;
+   }
+
+.symbol-legend {
+  background: white;
+  padding: 8px 10px;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+.symbol-legend-item {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.symbol-legend-circle {
+  display: inline-block;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  border: 3px solid blue;
+  border-radius: 50%;
+  background: rgba(75, 156, 211, 0.6);
+}
+</style>
+
+</head>
+<body>
+    <div id='map'></div>
+    <h1>North Carolina Public College Enrollment, 2026</h1>
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+
+<script>
+console.log("hello world!");
+    var map = L.map('map', {
+        center: [35.9,-79.0],
+        zoom: 7
+    });
+
+var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}', {
+	minZoom: 0,
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	ext: 'png'
+}).addTo(map);
+
+colleges = L.geoJson.ajax("assets/enrollment.geojson",{
+    attribution: 'northcarolina.edu, Map: Ray McCloskey',
+    pointToLayer: function (feature, x){
+      return L.circleMarker(x, {
+        color: 'blue',
+        opacity: 1,
+        weight: 3,
+        fillColor: '#4B9CD3',
+        fillOpacity: .6,
+        radius: calcRadius(feature.properties.Enrollment)
+      }).on({
+              mouseover: function(e){
+                this.setStyle({color: 'red',fillColor: 'red'});
+                this.bringToFront();
+                                    },
+              mouseout: function(e){
+                this.setStyle({color:'blue', fillColor: '#4B9CD3'});
+                }
+      }).bindTooltip(
+        '<strong>' + feature.properties.School + '</strong><br />Enrollment: ' +
+        feature.properties.Enrollment.toLocaleString()
+      );
+    }
+});
+	
+var minValue = 1141;
+var minRadius = 8;
+function calcRadius(val) {
+        return 1.00 * Math.pow(val/minValue,.5) * minRadius;
+        }
+
+L.control.scale({position: 'bottomleft'}).addTo(map);
+
+colleges.addTo(map);
+
+var legendValues = [1000, 10000, 40000];
+
+var symbolLegend = L.control({ position: 'bottomright' });
+
+symbolLegend.onAdd = function () {
+  var div = L.DomUtil.create('div', 'symbol-legend');
+  div.innerHTML = '<strong>Enrollment</strong>';
+
+  legendValues.forEach(function (value) {
+    var diameter = calcRadius(value) * 2;
+    div.innerHTML +=
+      '<div class="symbol-legend-item">' +
+        '<span class="symbol-legend-circle" style="width:' + diameter +
+        'px;height:' + diameter + 'px"></span>' +
+        '<span>' + value.toLocaleString() + '</span>' +
+      '</div>';
+  });
+
+  return div;
+};
+
+symbolLegend.addTo(map);
+</script>
+</body>
+</html>

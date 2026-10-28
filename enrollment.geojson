@@ -1,0 +1,197 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.04758977,35.90990719 ]
+    },
+    "properties": {
+    "School":"UNC-Chapel Hill",
+    "Enrollment":34482,
+    "address":"134 E Franklin St Chapel Hill, NC 27599"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.664093,35.786659 ]
+    },
+    "properties": {
+    "School":"North Carolina State University",
+    "Enrollment":39219,
+    "address":"2101 Hillsborough Street, Raleigh, NC 27695"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.902222,35.969261 ]
+    },
+    "properties": {
+    "School":"North Carolina Central University",
+    "Enrollment":10124,
+    "address":"1801 Fayetteville St, Durham, NC 27707"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.887016,35.059299 ]
+    },
+    "properties": {
+    "School":"Fayetteville State University",
+    "Enrollment":7741,
+    "address":"1200 Murchison Rd, Fayetteville, NC 28301"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.64521273,36.22674066 ]
+    },
+    "properties": {
+    "School":"Appalachian State University",
+    "Enrollment":21308,
+    "address":"287 Rivers St, Boone, NC 28608"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.36653737,35.60684335 ]
+    },
+    "properties": {
+    "School":"East Carolina University",
+    "Enrollment":27206,
+    "address":"1001 E 5th St\nGreenville, NC 27858"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -76.21386685,36.28023854 ]
+    },
+    "properties": {
+    "School":"Elizabeth City State University",
+    "Enrollment":2445,
+    "address":"1704 Weeksville Rd, Elizabeth City, NC 27909"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.77185901,36.0769862 ]
+    },
+    "properties": {
+    "School":"North Carolina A&T University",
+    "Enrollment":15713,
+    "address":"1601 E Market St, Greensboro, NC 27411"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.56658952,35.61694984 ]
+    },
+    "properties": {
+    "School":"University of North Carolina at Asheville",
+    "Enrollment":2646,
+    "address":"One University Hts, Asheville, NC 28804"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.73579705,35.30736634 ]
+    },
+    "properties": {
+    "School":"University of North Carolina at Charlotte",
+    "Enrollment":33045,
+    "address":"9201 University City Blvd, Charlotte, NC 28223"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.81019887,36.06890298 ]
+    },
+    "properties": {
+    "School":"University of North Carolina at Greensboro",
+    "Enrollment":19078,
+    "address":"1400 Spring Garden St, Greensboro, NC 27402"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.20160505,34.68917679 ]
+    },
+    "properties": {
+    "School":"University of North Carolina at Pembroke",
+    "Enrollment":7977,
+    "address":"One University Drive, Pembroke, NC 28372\n"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.23690229,36.07646175 ]
+    },
+    "properties": {
+    "School":"University of North Carolina School of the Arts",
+    "Enrollment":1141,
+    "address":"1533 South Main St., Winston-Salem, NC 27127"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -77.86793418,34.22435046 ]
+    },
+    "properties": {
+    "School":"University of North Carolina at Wilmington",
+    "Enrollment":20556,
+    "address":"601 South College Road, Wilmington, NC 28403"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -83.18633811,35.30894871 ]
+    },
+    "properties": {
+    "School":"Western Carolina University",
+    "Enrollment":12308,
+    "address":"Highway 107, Cullowhee, NC 28723"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.22518675,36.08977393 ]
+    },
+    "properties": {
+    "School":"Winston-Salem State University",
+    "Enrollment":5210,
+    "address":"601 Martin Luther King Jr Dr, Winston-Salem, NC 27110"
+    }
+  }
+]
+}
